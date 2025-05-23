@@ -36,7 +36,6 @@ public class Certificate {
 
         // 创建证书主题
         X500Name subject = new X500Name("CN=" + commonName);
-
         // 创建证书构建器
         X509v3CertificateBuilder certificateBuilder = new JcaX509v3CertificateBuilder(
                 subject,
