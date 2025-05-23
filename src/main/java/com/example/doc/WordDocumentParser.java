@@ -15,8 +15,8 @@ public class WordDocumentParser implements DocumentParser{
             String content = extractText(doc);
             Metadata metadata = extractMetadata(doc);
             return new Document(content, metadata);
-        } catch (Exception e) {
-            throw new DocumentParseException("Word文档解析失败", e);
+        } catch (IOException e) {
+            throw new RuntimeException(e.getMessage());
         }
     }
 
